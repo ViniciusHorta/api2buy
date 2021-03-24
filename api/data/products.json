@@ -1,0 +1,14 @@
+{
+    "products": [
+        {
+            "brand_name": "hans e eder",
+            "building_block": null,
+            "description": "",
+            "ean": "7898471672153",
+            "id": 62114,
+            "name": "SALSICHA VIENA 5kg",
+            "pic_primary_url": "https://image-server.lett.digital/thumbor/fit-in/400x400/gslett/pic-primary/5fe20fe18a5b290c15316624.jpg",
+            "supplier_id": "1260"
+        }
+    ]
+}
