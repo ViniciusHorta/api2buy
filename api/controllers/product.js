@@ -3,7 +3,7 @@ module.exports = app => {
   const controller = {};
   const https = require('https');
 
-  https.get('https://embed.2b.uy/data/seara/data.json', (resp) => {
+  https.get('https://embed.2b.uy/data/CITpmNqtQewVXcV2/data.json', (resp) => {
     let data = '';
 
     // A d of data has been received.
