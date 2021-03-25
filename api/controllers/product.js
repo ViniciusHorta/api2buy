@@ -1,11 +1,13 @@
 module.exports = app => {
-  let productDB = "";
   const controller = {};
-  const https = require('https');
-
+  
   controller.listProducts = (req, res) => {
+    let https = require('https');
+
     https.get(`https://embed.2b.uy/data/${req.query.productLine}/data.json`, (resp) => {
       let data = '';
+      
+      console.log(req.query.productLine);
 
       // A d of data has been received.
       resp.on('data', (d) => {
@@ -13,14 +15,14 @@ module.exports = app => {
       });
 
       resp.on('end', () => {
-        productDB = JSON.parse(data);
+        res.status(200).json(JSON.parse(data).lett_products);
       });
     }).on("error", (err) => {
       console.log("Error: " + err.message);
     });
 
 
-    res.status(200).json(productDB.lett_products);
+    
   }
 
   return controller;
